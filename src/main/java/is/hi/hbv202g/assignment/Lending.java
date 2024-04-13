@@ -1,4 +1,4 @@
-package is.hi.hbv202g.assignment8;
+package is.hi.hbv202g.assignment;
 
 import java.time.LocalDate;
 
@@ -37,4 +37,14 @@ class Lending {
   public void setUser(User user) {
     this.user = user;
   }
+
+  @Override
+  public String toString() {
+    return "Lending{" +
+            "dueDate=" + dueDate +
+            ", book=" + book.getTitle() +
+            ", user=" + user.getName() +
+            '}';
+  }
+
 }

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.layout.HBox?>
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+<VBox spacing="10" xmlns:fx="http://javafx.com/fxml" fx:controller="is.hi.hbv202g.assignment.UserManagementController" style="-fx-padding: 20;">
+    <Button mnemonicParsing="false" onAction="#onBack" text="Back" />
+    <Label text="User Management"/>
+    <HBox spacing="10">
+        <VBox spacing="5">
+            <TextField fx:id="nameField" promptText="Name"/>
+            <TextField fx:id="studentFeeField" promptText="Fee Paid (true/false)" visible="false"/>
+            <TextField fx:id="facultyDepartmentField" promptText="Department" visible="false"/>
+        </VBox>
+        <VBox spacing="5">
+            <Label text="User Type"/>
+            <ComboBox fx:id="userTypeComboBox">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="Student"/>
+                        <String fx:value="FacultyMember"/>
+                    </FXCollections>
+                </items>
+            </ComboBox>
+        </VBox>
+    </HBox>
+    <Button text="Add User" onAction="#handleAddUser"/>
+    <ListView fx:id="usersListView"/>
+</VBox>

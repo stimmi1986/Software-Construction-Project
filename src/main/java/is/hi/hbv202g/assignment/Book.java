@@ -1,4 +1,4 @@
-package is.hi.hbv202g.assignment8;
+package is.hi.hbv202g.assignment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,5 +37,17 @@ class Book {
 
   public void addAuthor(Author author) {
     this.authors.add(author);
+  }
+
+  public String getDueDate() {
+    throw new UnsupportedOperationException(
+      "Unimplemented method 'getDueDate'"
+    );
+  }
+
+  public String getBookCount() {
+    throw new UnsupportedOperationException(
+      "Unimplemented method 'getBookCount'"
+    );
   }
 }

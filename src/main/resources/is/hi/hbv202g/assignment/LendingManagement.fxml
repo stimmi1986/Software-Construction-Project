@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+
+<VBox spacing="10" xmlns:fx="http://javafx.com/fxml" fx:controller="is.hi.hbv202g.assignment.LendingManagementController" style="-fx-padding: 20;">
+    <Button mnemonicParsing="false" onAction="#onBack" text="Back" />
+    <Label text="Lending Management"/>
+    <HBox spacing="10">
+        <TextField fx:id="bookTitleField" promptText="Book Title"/>
+        <TextField fx:id="userNameField" promptText="User Name"/>
+    </HBox>
+    <Button text="Lend Book" onAction="#handleLendBook"/>
+    <Button text="Return Book" onAction="#handleReturnBook"/>
+    <ListView fx:id="lendingsListView"/>
+</VBox>

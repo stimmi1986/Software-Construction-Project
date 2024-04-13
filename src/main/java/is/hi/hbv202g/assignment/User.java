@@ -1,6 +1,6 @@
-package is.hi.hbv202g.assignment8;
+package is.hi.hbv202g.assignment;
 
-public class Author {
+abstract class User {
 
   private String name;
 
@@ -12,7 +12,7 @@ public class Author {
     this.name = name;
   }
 
-  public Author(String name) {
+  public User(String name) {
     this.name = name;
   }
 }

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="is.hi.hbv202g.assignment.BookManagementController">
+   <Button mnemonicParsing="false" onAction="#onBack" text="Back" />
+    <Label text="Book Management" />
+    <HBox spacing="10">
+        <Label text="Title:" />
+        <TextField fx:id="titleTextField" />
+    </HBox>
+    <HBox spacing="10">
+        <Label text="Author:" />
+        <TextField fx:id="authorTextField" />
+    </HBox>
+    <Button onAction="#handleAddBook" text="Add Book" />
+    <Separator />
+    <Label text="Existing Books:" />
+    <ListView fx:id="booksListView" />
+</VBox>

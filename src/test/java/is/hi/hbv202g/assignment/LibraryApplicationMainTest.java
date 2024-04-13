@@ -1,11 +1,11 @@
-package is.hi.hbv202g.assignment8;
+package is.hi.hbv202g.assignment;
 
 import org.junit.Test;
 
 /**
  * Unit test for simple Main.
  */
-public class MainTest
+public class LibraryApplicationMainTest
 {
     @Test
     public void shouldBePossibleToInstantiateLibrarySystem()
