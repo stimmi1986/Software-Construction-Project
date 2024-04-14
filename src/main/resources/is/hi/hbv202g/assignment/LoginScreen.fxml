@@ -1,10 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.VBox?>
 
-<VBox spacing="10" xmlns:fx="http://javafx.com/fxml" fx:controller="is.hi.hbv202g.assignment.LoginScreenController" style="-fx-padding: 20;">
-    <Label text="Library System Login" style="-fx-font-size: 16px;"/>
-    <TextField fx:id="usernameField" promptText="Username"/>
-    <PasswordField fx:id="passwordField" promptText="Password"/>
-    <Button text="Login" onAction="#handleLogin"/>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox prefHeight="171.0" prefWidth="302.0" spacing="10" style="-fx-padding: 20; -fx-background-color: E1D4FA;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.2-ea" fx:controller="is.hi.hbv202g.assignment.LoginScreenController">
+    <Label style="-fx-font-size: 16px;" text="Library System Login">
+      <font>
+         <Font name="Yu Gothic Regular" size="14.0" />
+      </font></Label>
+    <TextField fx:id="usernameField" promptText="Username" style="-fx-border-color: B39EDC; -fx-border-radius: 5px;" />
+    <PasswordField fx:id="passwordField" promptText="Password" style="-fx-border-color: B39EDC; -fx-border-radius: 5px;" />
+   <AnchorPane prefHeight="200.0" prefWidth="200.0">
+      <children>
+          <Button contentDisplay="RIGHT" layoutX="216.0" onAction="#handleLogin" style="-fx-border-color: B39EDC; -fx-border-radius: 5px; -fx-background-color: D3A8FD;" text="Login" textFill="WHITE">
+            <font>
+               <Font name="Yu Gothic Regular" size="14.0" />
+            </font>
+         </Button>
+      </children>
+   </AnchorPane>
 </VBox>
