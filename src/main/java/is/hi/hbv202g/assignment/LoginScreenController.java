@@ -1,6 +1,7 @@
 package is.hi.hbv202g.assignment;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import java.io.BufferedReader;
@@ -8,8 +9,10 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class LoginScreenController {
-    public TextField usernameField;
-    public PasswordField passwordField;
+    @FXML
+    private TextField usernameField;
+    @FXML
+    private PasswordField passwordField;
 
     public void handleLogin(ActionEvent actionEvent) {
         String username = usernameField.getText();

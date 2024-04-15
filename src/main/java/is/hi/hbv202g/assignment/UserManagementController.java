@@ -3,17 +3,23 @@ package is.hi.hbv202g.assignment;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 
 public class UserManagementController {
-    public TextField nameField;
-    public TextField studentFeeField;
-    public TextField facultyDepartmentField;
-    public ComboBox<String> userTypeComboBox;
-    public ListView<String> usersListView;
+    @FXML
+    private TextField nameField;
+    @FXML
+    private TextField studentFeeField;
+    @FXML
+    private TextField facultyDepartmentField;
+    @FXML
+    private ComboBox<String> userTypeComboBox;
+    @FXML
+    private ListView<String> usersListView;
 
     private LibrarySystem librarySystem;
 

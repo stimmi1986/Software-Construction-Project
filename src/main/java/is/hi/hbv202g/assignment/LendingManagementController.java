@@ -2,14 +2,18 @@ package is.hi.hbv202g.assignment;
 
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 
 public class LendingManagementController {
-    public TextField bookTitleField;
-    public TextField userNameField;
-    public ListView<Lending> lendingsListView;
+    @FXML
+    private TextField bookTitleField;
+    @FXML
+    private TextField userNameField;
+    @FXML
+    private ListView<Lending> lendingsListView;
 
     private final LibrarySystem librarySystem;
 
@@ -54,6 +58,7 @@ public class LendingManagementController {
             System.out.println("Book or user not found");}
     }
 
+    @FXML
     public void onBack(ActionEvent actionEvent) {
         LibraryApplication.loadMainDashboardScene();
     }
