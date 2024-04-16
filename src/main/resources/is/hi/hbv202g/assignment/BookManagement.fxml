@@ -2,20 +2,32 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<VBox xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="is.hi.hbv202g.assignment.BookManagementController">
-   <Button mnemonicParsing="false" onAction="#onBack" text="Back" />
-    <Label text="Book Management" />
-    <HBox spacing="10">
-        <Label text="Title:" />
-        <TextField fx:id="titleTextField" />
-    </HBox>
-    <HBox spacing="10">
-        <Label text="Author:" />
-        <TextField fx:id="authorTextField" />
-    </HBox>
-    <Button onAction="#handleAddBook" text="Add Book" />
-    <Separator />
-    <Label text="Existing Books:" />
-    <ListView fx:id="booksListView" />
-</VBox>
+<AnchorPane prefHeight="370.0" prefWidth="414.0" style="-fx-background-color: rgb(212,239,248);" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="is.hi.hbv202g.assignment.BookManagementController">
+   <children>
+       <Label alignment="CENTER" layoutX="116.0" layoutY="31.0" text="Book Management">
+         <font>
+            <Font name="Yu Gothic Regular" size="21.0" />
+         </font></Label>
+        <Label layoutX="47.0" layoutY="89.0" text="Title:">
+         <font>
+            <Font name="Yu Gothic Regular" size="14.0" />
+         </font></Label>
+        <TextField fx:id="titleTextField" layoutX="92.0" layoutY="83.0" prefHeight="28.0" prefWidth="197.0" style="-fx-border-color: rgb(9,146,188); -fx-background-radius: 10px; -fx-border-radius: 10px;" />
+        <Label layoutX="34.0" layoutY="128.0" text="Author:">
+         <font>
+            <Font name="Yu Gothic Regular" size="14.0" />
+         </font></Label>
+        <TextField fx:id="authorTextField" layoutX="92.0" layoutY="122.0" prefHeight="28.0" prefWidth="197.0" style="-fx-border-color: rgb(9,146,188); -fx-background-radius: 10px; -fx-border-radius: 10px;" />
+       <Button layoutX="299.0" layoutY="122.0" onAction="#handleAddBook" prefHeight="28.0" prefWidth="84.0" style="-fx-border-color: rgb(9,146,188); -fx-background-color: rgb(29,197,200); -fx-background-radius: 10px; -fx-border-radius: 10px;" text="Add book" textFill="WHITE">
+         <font>
+            <Font name="Yu Gothic Regular" size="14.0" />
+         </font></Button>
+       <ListView fx:id="booksListView" layoutX="31.0" layoutY="163.0" prefHeight="126.0" prefWidth="349.0" />
+      <Button layoutX="299.0" layoutY="304.0" mnemonicParsing="false" onAction="#onBack" prefHeight="28.0" prefWidth="84.0" style="-fx-border-color: rgb(9,146,188); -fx-background-color: rgb(29,197,200); -fx-background-radius: 10px; -fx-border-radius: 10px;" text="Back" textFill="WHITE">
+         <font>
+            <Font name="Yu Gothic Regular" size="14.0" />
+         </font></Button>
+   </children>
+</AnchorPane>

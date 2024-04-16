@@ -16,4 +16,8 @@ public class MainDashboardController {
     public void showLendingManagement(ActionEvent actionEvent) {
         LibraryApplication.loadLendingManagementScene();
     }
+
+    public void handleLogout(ActionEvent actionEvent) {
+        LibraryApplication.loadSignInScene();
+    }
 }

@@ -20,9 +20,9 @@ public class LibraryApplication extends Application {
     primaryStage.show();
   }
 
-  public void loadSignInScene() {
+  public static void loadSignInScene() {
     try {
-      FXMLLoader loader = new FXMLLoader(getClass().getResource("LoginScreen.fxml"));
+      FXMLLoader loader = new FXMLLoader(LibraryApplication.class.getResource("LoginScreen.fxml"));
       Parent root = loader.load();
       primaryStage.setScene(new Scene(root));
     } catch (IOException e) {

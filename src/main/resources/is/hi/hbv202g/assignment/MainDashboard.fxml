@@ -1,10 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.VBox?>
 
-<VBox spacing="20" xmlns:fx="http://javafx.com/fxml" fx:controller="is.hi.hbv202g.assignment.MainDashboardController" style="-fx-padding: 20;">
-    <Label text="Main Dashboard"/>
-    <Button text="Manage Books" onAction="#showBookManagement"/>
-    <Button text="Manage Users" onAction="#showUserManagement"/>
-    <Button text="Manage Lendings" onAction="#showLendingManagement"/>
-</VBox>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="370.0" prefWidth="414.0" style="-fx-background-color: rgb(212,239,248);" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="is.hi.hbv202g.assignment.MainDashboardController">
+   <children>
+      <Label layoutX="316.0" layoutY="14.0" text="Library System">
+         <font>
+            <Font name="Yu Gothic Regular" size="12.0" />
+         </font>
+      </Label>
+       <Label alignment="CENTER" layoutX="116.0" layoutY="56.0" prefHeight="26.0" prefWidth="181.0" text="Dashboard">
+         <font>
+            <Font name="Yu Gothic Regular" size="25.0" />
+         </font></Label>
+      <Separator layoutX="-2.0" layoutY="96.0" prefHeight="3.0" prefWidth="414.0" />
+       <Button layoutX="106.0" layoutY="123.0" onAction="#showBookManagement" prefHeight="28.0" prefWidth="217.0" style="-fx-border-color: rgb(9,146,188); -fx-background-color: rgb(29,197,200); -fx-background-radius: 10px; -fx-border-radius: 10px;" text="Manage books" textFill="WHITE">
+         <font>
+            <Font name="Yu Gothic Regular" size="14.0" />
+         </font></Button>
+       <Button layoutX="106.0" layoutY="171.0" onAction="#showLendingManagement" prefHeight="28.0" prefWidth="217.0" style="-fx-border-color: rgb(9,146,188); -fx-background-color: rgb(29,197,200); -fx-background-radius: 10px; -fx-border-radius: 10px;" text="Manage lendings" textFill="WHITE">
+         <font>
+            <Font name="Yu Gothic Regular" size="14.0" />
+         </font></Button>
+       <Button layoutX="106.0" layoutY="217.0" onAction="#showUserManagement" prefHeight="28.0" prefWidth="217.0" style="-fx-border-color: rgb(9,146,188); -fx-background-color: rgb(29,197,200); -fx-background-radius: 10px; -fx-border-radius: 10px;" text="Manage users" textFill="WHITE">
+         <font>
+            <Font name="Yu Gothic Regular" size="14.0" />
+         </font></Button>
+      <Button layoutX="173.0" layoutY="305.0" mnemonicParsing="false" onAction="#handleLogout" prefHeight="28.0" prefWidth="83.0" style="-fx-border-color: rgb(9,146,188); -fx-background-color: rgb(29,197,200); -fx-background-radius: 10px; -fx-border-radius: 10px;" text="Logout" textFill="WHITE">
+         <font>
+            <Font name="Yu Gothic Regular" size="14.0" />
+         </font></Button>
+   </children>
+</AnchorPane>

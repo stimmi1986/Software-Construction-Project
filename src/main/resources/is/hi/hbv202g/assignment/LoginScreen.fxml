@@ -4,20 +4,24 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox prefHeight="171.0" prefWidth="302.0" spacing="10" style="-fx-padding: 20; -fx-background-color: E1D4FA;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.2-ea" fx:controller="is.hi.hbv202g.assignment.LoginScreenController">
-    <Label style="-fx-font-size: 16px;" text="Library System Login">
-      <font>
-         <Font name="Yu Gothic Regular" size="14.0" />
-      </font></Label>
-    <TextField fx:id="usernameField" promptText="Username" style="-fx-border-color: B39EDC; -fx-border-radius: 5px;" />
-    <PasswordField fx:id="passwordField" promptText="Password" style="-fx-border-color: B39EDC; -fx-border-radius: 5px;" />
-   <AnchorPane prefHeight="200.0" prefWidth="200.0">
-      <children>
-          <Button contentDisplay="RIGHT" layoutX="216.0" onAction="#handleLogin" style="-fx-border-color: B39EDC; -fx-border-radius: 5px; -fx-background-color: D3A8FD;" text="Login" textFill="WHITE">
-            <font>
-               <Font name="Yu Gothic Regular" size="14.0" />
-            </font>
-         </Button>
-      </children>
-   </AnchorPane>
-</VBox>
+<AnchorPane prefHeight="370.0" prefWidth="282.0" style="-fx-background-color: rgb(212,239,248);" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="is.hi.hbv202g.assignment.LoginScreenController">
+   <children>
+      <Label alignment="CENTER" layoutX="62.0" layoutY="57.0" prefHeight="25.0" prefWidth="157.0" text="Library System">
+         <font>
+            <Font name="Yu Gothic Regular" size="21.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="62.0" layoutY="82.0" prefHeight="25.0" prefWidth="157.0" text="Log in to your account">
+         <font>
+            <Font name="Yu Gothic Regular" size="15.0" />
+         </font>
+      </Label>
+       <TextField fx:id="usernameField" layoutX="37.0" layoutY="142.0" prefHeight="28.0" prefWidth="207.0" promptText="Username" style="-fx-border-color: rgb(9,146,188); -fx-border-radius: 10px; -fx-background-radius: 10px;" />
+       <PasswordField fx:id="passwordField" layoutX="37.0" layoutY="178.0" prefHeight="28.0" prefWidth="207.0" promptText="Password" style="-fx-border-color: rgb(9,146,188); -fx-border-radius: 10px; -fx-background-radius: 10px;" />
+       <Button contentDisplay="RIGHT" layoutX="96.0" layoutY="236.0" onAction="#handleLogin" prefHeight="28.0" prefWidth="90.0" style="-fx-border-color: rgb(9,146,188); -fx-border-radius: 10px; -fx-background-color: rgb(29,197,200); -fx-background-radius: 10px;" text="Login" textFill="WHITE">
+         <font>
+            <Font name="Yu Gothic Regular" size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
