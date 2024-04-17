@@ -2,6 +2,7 @@ package is.hi.hbv202g.assignment;
 
 import java.time.LocalDate;
 import java.util.*;
+import java.util.stream.Collectors;
 
 class LibrarySystem {
 
@@ -125,8 +126,8 @@ class LibrarySystem {
     }
   }
 
-  public String getAllUserNames() {
-    return String.join(", ", users.keySet());
+  public List<String> getAllUserNames() {
+    return users.values().stream().map(User::getName).collect(Collectors.toList());
   }
 
   public List<Lending> getAllLendings() {
