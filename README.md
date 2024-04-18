@@ -1,13 +1,29 @@
-# HBV202GAssignment8
-A Maven project skeleton. The provided Maven POM sets the Java version to 17.
+# HBV202G - Software Construction Project
 
-All classes need to be located in Java package `is.hi.hbv202g.assignment`.
+This is our effort to create final project in the course HBV202G. Made in Intellij with JavaFX
+***
+The system allows users to add books to the library database, borrow and return them, and track these transactions with ease.
 
-Class and method names of the submitted solution need to be **exactly** the same 
-as in the UML class diagram in the assignment PDF. 
+### Key Features
+- **Book Management**: Add new books with titles and authors to the library's catalog
+- **Lending System**: Keep track of borrowed and returned books for users.
+- **User Management**: Add user or faculty member
 
-If you like, you can import from project directory `UML` the file 
-`library_system.uxf` into the online UML editor https://www.umletino.com/ 
-and copy/paste from there class and method names: click on a class and then, 
-you can copy from the `properties` window on the right hand side class 
-and method names.
+### Installing
+1. Clone the repository: `https://github.com/stimmi1986/Software-Construction-Project`
+2. Navigate to the project directory `cd Software-Construction-Project`
+3. Use Maven to compile and run the project `mvn clean install`
+
+### Tests
+Run tests with `mvn test`
+
+### UML diagram
+Import the `LibrarySystem.uxf` into https://www.umletino.com/
+
+### Authors
+- Styrmir Örn Arnarson - soa6@hi.is
+- Telma Jóhannsdóttir - tej2@hi.is
+
+### License
+This project is licensed under the MIT License - see the LICENSE.md file for details
+
