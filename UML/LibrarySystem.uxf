@@ -1,0 +1,171 @@
+<diagram program="umletino" version="15.1"><zoom_level>8</zoom_level><element><id>UMLClass</id><coordinates><x>704</x><y>115</y><w>432</w><h>256</h></coordinates><panel_attributes>LibrarySystem
+--
+- books: Map&lt;String, Book&gt;
+- users: Map&lt;String, User&gt;
+- lendings: List&lt;Lending&gt;
+- instance: LibrarySystem
+--
++LibrarySystem(): ctor
++ initializeDefaultData(): void
++ getInstance(): LibrarySystem
++ getAllBooks(): Collection&lt;Book&gt;
++ addBookWithTitleAndNameOfSingleAuthor(title: String, authorName: String): void
++ addBookWithTitleAndAuthorList(title: String, authors: List&lt;Author&gt;): void
++ addStudentUser(name: String, feePaid: boolean): void
++ addFacultyMemberUser(name: String, department: String): void
++ findBookByTitle(title: String): Book
++ finUserByName(name: String): User
++ borrowBook(user: User, book: Book): void
++ extendLending(faculltyMember: FacultyMember, book: Book, newDueDate:LocalDate):void
++ returnBook(user: User, book: Book): void
++ getAllUserNames(): String
++ getAllLendings(): List&lt;Lending&gt;</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>720</x><y>395</y><w>240</w><h>160</h></coordinates><panel_attributes>Lending
+--
+-dueDate: LocalDate
+- book: Book
+- user: User
+--
++Lending(book: Book, user: User): ctor
++getDueDate(): LocalDate
++setDueDate(dueDate: LocalDate): void
++getBook(): Book
++setBook(book: Book): void
++getUser(): User
++setUser(user: User): void
++ toString(): String
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>376</x><y>411</y><w>288</w><h>160</h></coordinates><panel_attributes>Book
+--
+-title: String
+- authors: List&lt;Author&gt;
+--
++ Book(title: String, authorName: String): ctor
++ Book(title: String, authors: List&lt;Author&gt;): ctor
++getAuthors(): List&lt;Author&gt;
++setAuthors(authors: List&lt;Author&gt;): void
++addAuthor(author: Author): void
++getTitle(): String
++setTitle(title: String): void
++getDueDate(): String
++ getBookCount(): String
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>384</x><y>635</y><w>184</w><h>88</h></coordinates><panel_attributes>Author
+--
+-name: String
+--
++Author(name: String): ctor
++getName(): String
++setName(name: String): void
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>592</x><y>603</y><w>232</w><h>88</h></coordinates><panel_attributes>Student
+--
+-feePaid: boolean
+--
++Student(name: String, feePaid: boolean): ctor
++isFeePaid(): boolean
++setFeePaid(feePaid: boolean): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1016</x><y>427</y><w>184</w><h>80</h></coordinates><panel_attributes>/User {abstract}/
+--
+-name: String
+--
++User(name: String): ctor
++getName(): String
++setName(name: String): void
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>872</x><y>603</y><w>280</w><h>88</h></coordinates><panel_attributes>FacultyMember
+--
+-department: String
+--
++FacultyMember(name: String, department: String): ctor
++getDepartment(): String
++setDepartment(department: String): void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>416</x><y>187</y><w>248</w><h>56</h></coordinates><panel_attributes>UserOrBookDoesNotExistException
+--
+--
++UserOrBookDoesNotExistException
+                              (message: String): ctor
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1128</x><y>499</y><w>24</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;130</additional_attributes></element><element><id>Relation</id><coordinates><x>768</x><y>499</y><w>312</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>370;10;370;100;10;100;10;130</additional_attributes></element><element><id>Relation</id><coordinates><x>480</x><y>563</y><w>56</w><h>88</h></coordinates><panel_attributes>lt=&lt;-
+m1=1..n
+authors</panel_attributes><additional_attributes>10;90;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>560</x><y>355</y><w>160</w><h>72</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m2=0..n</panel_attributes><additional_attributes>180;10;10;10;10;70</additional_attributes></element><element><id>Relation</id><coordinates><x>656</x><y>443</y><w>80</w><h>40</h></coordinates><panel_attributes>lt=&lt;-
+m1=1
+book</panel_attributes><additional_attributes>10;20;80;30</additional_attributes></element><element><id>Relation</id><coordinates><x>952</x><y>427</y><w>80</w><h>40</h></coordinates><panel_attributes>lt=&lt;-
+m1=1
+user</panel_attributes><additional_attributes>80;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>952</x><y>363</y><w>56</w><h>48</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m2=0..n</panel_attributes><additional_attributes>50;10;10;40</additional_attributes></element><element><id>Relation</id><coordinates><x>1096</x><y>363</y><w>40</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m2=0..n</panel_attributes><additional_attributes>20;10;10;80</additional_attributes></element><element><id>Relation</id><coordinates><x>584</x><y>147</y><w>136</w><h>56</h></coordinates><panel_attributes>lt=&lt;.
+&lt;&lt;throws&gt;&gt;</panel_attributes><additional_attributes>10;50;10;20;150;20</additional_attributes></element><element><id>Relation</id><coordinates><x>552</x><y>243</y><w>168</w><h>64</h></coordinates><panel_attributes>lt=&lt;.
+&lt;&lt;throws&gt;&gt;</panel_attributes><additional_attributes>10;60;10;20;190;20</additional_attributes></element><element><id>Relation</id><coordinates><x>496</x><y>339</y><w>64</w><h>88</h></coordinates><panel_attributes>lt=&lt;.
+&lt;&lt;throws&gt;&gt;</panel_attributes><additional_attributes>10;10;10;90</additional_attributes></element><element><id>UMLClass</id><coordinates><x>376</x><y>291</y><w>248</w><h>56</h></coordinates><panel_attributes>EmptyAuthorListException
+--
+--
++EmptyAuthorListException(message: String): ctor
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>376</x><y>115</y><w>168</w><h>24</h></coordinates><panel_attributes>java.lang.Exception</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>464</x><y>131</y><w>24</w><h>72</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;70</additional_attributes></element><element><id>Relation</id><coordinates><x>392</x><y>131</y><w>24</w><h>176</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;200</additional_attributes></element><element><id>Text</id><coordinates><x>568</x><y>371</y><w>56</w><h>24</h></coordinates><panel_attributes>books
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>784</x><y>371</y><w>72</w><h>24</h></coordinates><panel_attributes>lendings
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>1064</x><y>403</y><w>56</w><h>24</h></coordinates><panel_attributes>users
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLNote</id><coordinates><x>560</x><y>115</y><w>104</w><h>24</h></coordinates><panel_attributes>provided by Java
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>536</x><y>107</y><w>40</w><h>40</h></coordinates><panel_attributes>lt=.
+</panel_attributes><additional_attributes>10;30;30;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>384</x><y>771</y><w>232</w><h>136</h></coordinates><panel_attributes>BookingManageMentController
+--
+- titleTextField: TextField
+- authorTextField: TextField
+- booksListView: ListView&lt;Book&gt;
+- librarySystem: LibrarySystem
+--
++ initialize(): void 
++ handleAddBook(actionEvent: ActionEvent): void
++ onBack(actionEvent: ActionEvent): void
++ updateBooksListView(): void  
++ clearForm(): void  
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>640</x><y>771</y><w>232</w><h>120</h></coordinates><panel_attributes>LibraryApplication
+--
+- primaryStage: Stage
+--
++ start(primaryStage: Stage): void
++ loadSignInScene(): void
++ loadMainDashboardScene(): void
++ loadBookManagementScene(): void
++ loadUserManagementScene(): void
++ loadLendingManagementScene(): void
++ main(args: String[]): void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>888</x><y>771</y><w>232</w><h>120</h></coordinates><panel_attributes>LendingManagementController
+--
+- bookTitleField: TextField
+- userNameField: TextField
+- lendingsListView: ListView&lt;Lending&gt;
+- librarySystem: LibrarySystem
+--
++ initialize(): void
++ updateLendingsListView(): void
++ handleLendBook(ActionEvent): void
++ handleReturnBook(ActionEvent): void
++ onBack(ActionEvent): void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>888</x><y>907</y><w>232</w><h>120</h></coordinates><panel_attributes>UserManagementController
+--
+- nameField: TextField
+- studentFeeField: TextField
+- facultyDepartmentField: TextField
+- userTypeComboBox: ComboBox&lt;String&gt;
+- usersListView: ListView&lt;String&gt;
+- librarySystem: LibrarySystem
+--
++ initialize(): void
++ handleAddUser(ActionEvent): void
++ refreshUsersListView(): void
++ clearForm(): void
++ onBack(ActionEvent): void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>640</x><y>923</y><w>232</w><h>64</h></coordinates><panel_attributes>MainDashboardController
+--
+--
++ showBookManagement(ActionEvent): void
++ showUserManagement(ActionEvent): void
++ showLendingManagement(ActionEvent): void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>384</x><y>923</y><w>240</w><h>104</h></coordinates><panel_attributes>LoginScreenController
+--
+- usernameField: TextField
+- passwordField: TextField
+- loginLabel: Label
+--
++ handleLogin(ActionEvent): void
++ validateCredentials(username: String, password: 
+                                             String): boolean
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>832</x><y>547</y><w>120</w><h>240</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;10;10;220;130;220;130;280</additional_attributes></element><element><id>Relation</id><coordinates><x>1112</x><y>499</y><w>80</w><h>336</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>80;10;80;400;10;400</additional_attributes></element></diagram>
