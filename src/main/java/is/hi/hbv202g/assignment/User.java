@@ -4,7 +4,7 @@ package is.hi.hbv202g.assignment;
  * Abstrakt klasi sem lýsir grunneiginleikum notanda innan bókasafnskerfisins.
  * Þessi klasi er grunnurinn fyrir öll notendategundir innan kerfisins.
  */
-abstract class User {
+public abstract class User {
 
   private String name; // Nafn notandans
 

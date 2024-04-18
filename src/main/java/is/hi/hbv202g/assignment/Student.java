@@ -4,7 +4,7 @@ package is.hi.hbv202g.assignment;
  * Lýsir nemandanum innan bókasafnskerfisins.
  * Þessi klasi erfir frá User og bætir við breytu til að fylgjast með hvort skráningargjald hafi verið greitt.
  */
-class Student extends User {
+public class Student extends User {
 
   private boolean feePaid; // Greiðslustöðu fyrir skráningargjald
 

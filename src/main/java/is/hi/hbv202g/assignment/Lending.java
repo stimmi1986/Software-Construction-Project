@@ -9,7 +9,7 @@ import java.time.LocalDate;
  * @author Nafn höfundar
  * @version 1.0
  */
-class Lending {
+public class Lending {
 
   private LocalDate dueDate; // Skiladagur bókar
   private Book book; // Bókin sem er útlánuð

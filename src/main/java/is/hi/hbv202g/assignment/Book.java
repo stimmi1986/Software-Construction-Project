@@ -7,7 +7,7 @@ import java.util.List;
  * Lýsir bók innan bókasafnskerfisins.
  * Hver bók hefur titil og einn eða fleiri höfunda.
  */
-class Book {
+public class Book {
 
   private String title; // Titill bókarinnar
   private List<Author> authors; // Listi yfir höfunda bókarinnar

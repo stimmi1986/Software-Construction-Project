@@ -50,15 +50,15 @@ public class LibrarySystem {
     );
     addBookWithTitleAndAuthorList(
       "The Hobbit",
-      Arrays.asList(new Author("J. R. R. Tolkien"))
+            List.of(new Author("J. R. R. Tolkien"))
     );
     addBookWithTitleAndAuthorList(
       "The Lord of the Rings",
-      Arrays.asList(new Author("J. R. R. Tolkien"))
+      List.of(new Author("J. R. R. Tolkien"))
     );
     addBookWithTitleAndAuthorList(
       "The Fellowship of the Ring",
-      Arrays.asList(new Author("J. R. R. Tolkien"))
+            List.of(new Author("J. R. R. Tolkien"))
     );
     addStudentUser("John Doe", true);
     addStudentUser("Jane Doe", false);

@@ -8,7 +8,7 @@ package is.hi.hbv202g.assignment;
  * @author Nafn höfundar
  * @version 1.0
  */
-class FacultyMember extends User {
+public class FacultyMember extends User {
 
   private String department; // Deild sem kennari tilheyrir
 
