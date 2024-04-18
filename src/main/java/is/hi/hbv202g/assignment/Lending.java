@@ -40,11 +40,7 @@ class Lending {
 
   @Override
   public String toString() {
-    return "Lending{" +
-            "dueDate=" + dueDate +
-            ", book=" + book.getTitle() +
-            ", user=" + user.getName() +
-            '}';
+    return book.getTitle() + " loaned by " + user.getName() + ". Due date is: " + dueDate;
   }
 
 }

@@ -4,10 +4,10 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="370.0" prefWidth="414.0" style="-fx-background-color: rgb(212,239,248);" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="is.hi.hbv202g.assignment.LendingManagementController">
+<AnchorPane prefHeight="411.0" prefWidth="414.0" style="-fx-background-color: rgb(212,239,248);" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="is.hi.hbv202g.assignment.LendingManagementController">
    <children>
         <TextField fx:id="bookTitleField" layoutX="55.0" layoutY="83.0" prefHeight="28.0" prefWidth="197.0" promptText="Book Title" style="-fx-border-color: rgb(9,146,188); -fx-background-radius: 10px; -fx-border-radius: 10px;" />
-       <Button layoutX="299.0" layoutY="304.0" mnemonicParsing="false" onAction="#onBack" prefWidth="84.0" style="-fx-border-color: rgb(9,146,188); -fx-background-color: rgb(29,197,200); -fx-background-radius: 10px; -fx-border-radius: 10px;" text="Back" textFill="WHITE">
+       <Button layoutX="299.0" layoutY="330.0" mnemonicParsing="false" onAction="#onBack" prefWidth="84.0" style="-fx-border-color: rgb(9,146,188); -fx-background-color: rgb(29,197,200); -fx-background-radius: 10px; -fx-border-radius: 10px;" text="Back" textFill="WHITE">
          <font>
             <Font name="Yu Gothic Regular" size="14.0" />
          </font></Button>
@@ -23,7 +23,8 @@
          <font>
             <Font name="Yu Gothic Regular" size="11.5" />
          </font></Button>
-       <ListView fx:id="lendingsListView" layoutX="31.0" layoutY="163.0" prefHeight="126.0" prefWidth="349.0" />
+       <ListView fx:id="lendingsListView" layoutX="31.0" layoutY="188.0" prefHeight="126.0" prefWidth="349.0" />
         <TextField fx:id="userNameField" layoutX="55.0" layoutY="122.0" prefHeight="28.0" prefWidth="197.0" promptText="Username" style="-fx-border-color: rgb(9,146,188); -fx-background-radius: 10px; -fx-border-radius: 10px;" />
+      <Label fx:id="messageLabel" alignment="CENTER" layoutX="108.0" layoutY="161.0" prefHeight="17.0" prefWidth="144.0" />
    </children>
 </AnchorPane>

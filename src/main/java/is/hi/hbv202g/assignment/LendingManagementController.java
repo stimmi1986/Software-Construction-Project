@@ -4,6 +4,7 @@ import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 
@@ -14,6 +15,8 @@ public class LendingManagementController {
     private TextField userNameField;
     @FXML
     private ListView<Lending> lendingsListView;
+    @FXML
+    private Label messageLabel;
 
     private final LibrarySystem librarySystem;
 
@@ -41,6 +44,7 @@ public class LendingManagementController {
             librarySystem.borrowBook(user, book);
             updateLendingsListView();
         } else {
+            messageLabel.setText("User or book not found");
             System.out.println("Book or user not found");
         }
     }

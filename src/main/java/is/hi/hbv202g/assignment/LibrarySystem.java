@@ -1,7 +1,12 @@
 package is.hi.hbv202g.assignment;
 
+import javafx.fxml.FXML;
+import javafx.scene.control.Label;
+
+
 import java.time.LocalDate;
 import java.util.*;
+import java.util.List;
 import java.util.stream.Collectors;
 
 class LibrarySystem {
@@ -9,6 +14,8 @@ class LibrarySystem {
   private final Map<String, Book> books = new HashMap<>();
   private final Map<String, User> users = new HashMap<>();
   private final List<Lending> lendings = new ArrayList<>();
+  @FXML
+  private Label messageLabel;
 
   private static final LibrarySystem instance = new LibrarySystem();
 
@@ -122,7 +129,7 @@ class LibrarySystem {
       lendings.remove(lending);
       System.out.println("Book returned: " + book.getTitle() + " by " + user.getName());
     } else {
-      System.out.println("Lending not found.");
+      System.out.println("Book not found.");
     }
   }
 
