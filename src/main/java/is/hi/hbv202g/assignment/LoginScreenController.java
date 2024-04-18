@@ -2,6 +2,7 @@ package is.hi.hbv202g.assignment;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import java.io.BufferedReader;
@@ -13,6 +14,8 @@ public class LoginScreenController {
     private TextField usernameField;
     @FXML
     private PasswordField passwordField;
+    @FXML
+    private Label loginLabel;
 
     public void handleLogin(ActionEvent actionEvent) {
         String username = usernameField.getText();
@@ -26,7 +29,7 @@ public class LoginScreenController {
             System.out.println("Login successful");
             LibraryApplication.loadMainDashboardScene();
         } else {
-            System.out.println("Login failed");
+            loginLabel.setText("Login failed");
         }
     }
 

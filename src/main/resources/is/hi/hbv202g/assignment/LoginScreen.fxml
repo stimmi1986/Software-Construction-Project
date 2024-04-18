@@ -18,10 +18,15 @@
       </Label>
        <TextField fx:id="usernameField" layoutX="37.0" layoutY="142.0" prefHeight="28.0" prefWidth="207.0" promptText="Username" style="-fx-border-color: rgb(9,146,188); -fx-border-radius: 10px; -fx-background-radius: 10px;" />
        <PasswordField fx:id="passwordField" layoutX="37.0" layoutY="178.0" prefHeight="28.0" prefWidth="207.0" promptText="Password" style="-fx-border-color: rgb(9,146,188); -fx-border-radius: 10px; -fx-background-radius: 10px;" />
-       <Button contentDisplay="RIGHT" layoutX="96.0" layoutY="236.0" onAction="#handleLogin" prefHeight="28.0" prefWidth="90.0" style="-fx-border-color: rgb(9,146,188); -fx-border-radius: 10px; -fx-background-color: rgb(29,197,200); -fx-background-radius: 10px;" text="Login" textFill="WHITE">
+       <Button contentDisplay="RIGHT" layoutX="96.0" layoutY="278.0" onAction="#handleLogin" prefHeight="28.0" prefWidth="90.0" style="-fx-border-color: rgb(9,146,188); -fx-border-radius: 10px; -fx-background-color: rgb(29,197,200); -fx-background-radius: 10px;" text="Login" textFill="WHITE">
          <font>
             <Font name="Yu Gothic Regular" size="14.0" />
          </font>
       </Button>
+      <Label fx:id="loginLabel" alignment="CENTER" layoutX="83.0" layoutY="220.0" prefHeight="16.0" prefWidth="116.0">
+         <font>
+            <Font name="Yu Gothic Regular" size="14.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
