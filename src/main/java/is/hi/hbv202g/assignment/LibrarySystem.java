@@ -15,14 +15,11 @@ import javafx.scene.control.Label;
  * @author Nafn höfundar
  * @version 1.0
  */
-class LibrarySystem {
+public class LibrarySystem {
 
   private final Map<String, Book> books = new HashMap<>();
   private final Map<String, User> users = new HashMap<>();
   private final List<Lending> lendings = new ArrayList<>();
-
-  @FXML
-  private Label messageLabel;
 
   private static final LibrarySystem instance = new LibrarySystem();
 
