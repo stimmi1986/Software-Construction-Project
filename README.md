@@ -21,7 +21,7 @@ Run tests with `mvn test`
 Import the `LibrarySystem.uxf` into https://www.umletino.com/
 
 ### Authors
-- Styrmir Örn Arnarson - soa6@hi.is
+- Styrmir Örn Arnarson - soa61@hi.is
 - Telma Jóhannsdóttir - tej2@hi.is
 
 ### License
